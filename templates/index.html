@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Summarization Tool</title>
+</head>
+<body>
+    <h1>Content Summarization</h1>
+    
+    <form action="/summarize" method="post">
+        <label for="input_text">Enter the text to summarize:</label><br>
+        <textarea id="input_text" name="input_text" rows="10" cols="50"></textarea><br>
+        <button type="submit">Summarize</button>
+    </form>
+
+    {% if input_text %}
+    <h2>Generated Summary:</h2>
+    <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
